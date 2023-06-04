@@ -22,7 +22,7 @@
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
 	};
-        
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -43,6 +43,8 @@
         &kp LSFT       &kp Z    &kp X    &kp C    &kp V     &kp B           &kp N    &kp M      &kp CMMA  &kp DOT   &kp FSLH  &mo NAVI
                                  &kp LGUI  &mo LOWER  &mt LSFT SPC          &kp RET  &mo RAISE  &kp LALT
                             >;
+
+                  label = "Jing";
                 };
 
 
@@ -64,6 +66,7 @@
           &none      &kp F1   &kp F2   &kp F3   &kp F12   &none       &kp NUM_0  &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp EQUAL  &none
                                        &trans   &trans    &trans      &trans     &mo ADJS     &trans
                             >;
+                  label = "Numbers";
                 };
 
 
@@ -85,6 +88,7 @@
         &none    &kp PRCNT  &kp CARET &kp LBKT  &kp RBKT  &kp TILDE    &kp AMPS   &kp EQUAL  &kp COMMA  &none  &none  &none
                                       &trans    &mo ADJS    &trans       &trans     &trans     &trans
                         >;
+                        label = "Symbols";
                 };
 
 
@@ -105,6 +109,7 @@
           &kp LSFT  &none   &none    &none     &none    &none        &none      &none      &none      &none     &none  &trans
                                      &kp LGUI  &none    &kp LALT     &none      &none      &none
                         >;
+                        label = "Navigation";
                 };
 
 
@@ -126,6 +131,7 @@
     &ext_power EP_OFF   &none         &none         &none         &none         &none              &none       &none      &none     &none    &none    &none
                                                     &kp LALT      &none         &none              &none       &none      &trans
                         >;
+                        label = "Bluetooth";
                 };
         };
 };
