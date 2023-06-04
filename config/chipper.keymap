@@ -66,7 +66,7 @@
           &none      &kp F1   &kp F2   &kp F3   &kp F12   &none       &kp NUM_0  &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp EQUAL  &none
                                        &trans   &trans    &trans      &trans     &mo ADJS     &trans
                             >;
-                  label = "Numbers";
+                  label = "NUM";
                 };
 
 
@@ -88,7 +88,7 @@
         &none    &kp PRCNT  &kp CARET &kp LBKT  &kp RBKT  &kp TILDE    &kp AMPS   &kp EQUAL  &kp COMMA  &none  &none  &none
                                       &trans    &mo ADJS    &trans       &trans     &trans     &trans
                         >;
-                        label = "Symbols";
+                        label = "SYM";
                 };
 
 
@@ -109,7 +109,7 @@
           &kp LSFT  &none   &none    &none     &none    &none        &none      &none      &none      &none     &none  &trans
                                      &kp LGUI  &none    &kp LALT     &none      &none      &none
                         >;
-                        label = "Navigation";
+                        label = "NAV";
                 };
 
 
@@ -131,7 +131,7 @@
     &ext_power EP_OFF   &none         &none         &none         &none         &none              &none       &none      &none     &none    &none    &none
                                                     &kp LALT      &none         &none              &none       &none      &trans
                         >;
-                        label = "Bluetooth";
+                        label = "Profile";
                 };
         };
 };
