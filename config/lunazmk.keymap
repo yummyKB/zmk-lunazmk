@@ -10,10 +10,12 @@
 // defines readable layer index
 
 #define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define NAVI    3
-#define ADJS    4
+#define layer_1   1
+#define layer_2   2
+#define layer_3   3
+#define layer_4   4
+#define layer_5   5
+#define layer_6   6
 
 / {
     chosen {
@@ -42,11 +44,9 @@
 &kt LSHFT  &kt Z  &kt X  &kt C             &kt V            &kt B               &kt N        &kt M        &kt COMMA      &kt PERIOD  &kt SLASH      &trans
                          &lt 3 LANGUAGE_2  &lt 2 BACKSPACE  &lt 1 LANGUAGE_1    &lt 4 SPACE  &lt 4 ENTER  &kt RIGHT_GUI
             >;
-
-            label = "Jing";
         };
 
-        lower_layer {
+        layer_1 {
             // LOWER Layer: Media and Number Pad
             // .--------------------------------------------------------------.    .-----------------------------------------------------------.
             // |              |    F5   |   F8   |   F9   |   F10   |         |    |  / ?  |   7 &   |   8 *   |   9 (   |   - _    |   BKSP   |
@@ -64,11 +64,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
-
-            label = "NUM";
         };
 
-        raise_layer {
+        layer_2 {
             // RAISE Layer: Special Chars
             // .--------------------------------------------------------------.    .-----------------------------------------------------------.
             // |              |    !    |    @   |   {    |    }    |    |    |    |   *   |    _    |    €    |         |          |          |
@@ -86,11 +84,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
-
-            label = "SYM";
         };
 
-        nav_layer {
+        layer_3 {
             // NAVIGATION Layer: Directions
             // .--------------------------------------------------------------.    .-----------------------------------------------------------.
             // |              |         |        |        |         |         |    | PG UP | PG HOME |   UP    |  PG END |          |  PrtScn  |
@@ -108,11 +104,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
-
-            label = "NAV";
         };
 
-        adjust_layer {
+        layer_4 {
             // ADJUST Layer: Setting and Configurations
             // .------------------------------------------------------------.    .-------------------------------------------------------------.
             // |      0     |  BT 0   |  BT 1  |  BT 2  |  BT 3   |  BT 4   |    |  BT CLR |         |         |         |          |          |
@@ -130,8 +124,46 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+        };
 
-            label = "Profile";
+        layer_5 {
+            // ADJUST Layer: Setting and Configurations
+            // .------------------------------------------------------------.    .-------------------------------------------------------------.
+            // |      0     |  BT 0   |  BT 1  |  BT 2  |  BT 3   |  BT 4   |    |  BT CLR |         |         |         |          |          |
+            // |------------+---------+--------+--------+---------+---------|    |---------+---------+---------+---------+----------+----------|
+            // | ExtPow ON  |         |        |        |         |         |    |         |         |         |         |          |          |
+            // |------------+---------+--------+--------+---------+---------|    |---------+---------+---------+---------+----------+----------|
+            // | ExtPow OFF |         |        |        |         |         |    |         |         |         |         |          |          |
+            // '-------------------------------+--------+---------+---------+    |---------+---------+---------+-------------------------------'
+            //                                 |        |         |         |    |         |         |         |
+            //                                 '--------+---------+---------'    '---------+---------+---------'
+
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            // ADJUST Layer: Setting and Configurations
+            // .------------------------------------------------------------.    .-------------------------------------------------------------.
+            // |      0     |  BT 0   |  BT 1  |  BT 2  |  BT 3   |  BT 4   |    |  BT CLR |         |         |         |          |          |
+            // |------------+---------+--------+--------+---------+---------|    |---------+---------+---------+---------+----------+----------|
+            // | ExtPow ON  |         |        |        |         |         |    |         |         |         |         |          |          |
+            // |------------+---------+--------+--------+---------+---------|    |---------+---------+---------+---------+----------+----------|
+            // | ExtPow OFF |         |        |        |         |         |    |         |         |         |         |          |          |
+            // '-------------------------------+--------+---------+---------+    |---------+---------+---------+-------------------------------'
+            //                                 |        |         |         |    |         |         |         |
+            //                                 '--------+---------+---------'    '---------+---------+---------'
+
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
