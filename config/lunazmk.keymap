@@ -62,7 +62,7 @@
 &trans     &kp SLASH     &kp NUMBER_7            &kp NUMBER_8             &kp NUMBER_9  &kp MINUS       &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW       &kp UNDERSCORE         &trans
 &kt PLUS   &kt ASTERISK  &kt NUMBER_4            &kt NUMBER_5             &kt NUMBER_6  &kt PERIOD      &kt EXCLAMATION  &kt AT_SIGN     &kt HASH      &kt DOLLAR            &kt PERCENT            &trans
 &kt EQUAL  &kt ENTER     &kt NUMBER_1            &kt NUMBER_2             &kt NUMBER_3  &kt NUMBER_0    &kt CARET        &kt AMPERSAND   &kt ASTERISK  &kt LEFT_PARENTHESIS  &kt RIGHT_PARENTHESIS  &trans
-                         &kt LC(LG(LEFT_ARROW))  &kt LC(LG(RIGHT_ARROW))  &trans        &trans          &trans           &trans
+                         &kt LC(LG(LEFT_ARROW))  &kt LC(LG(RIGHT_ARROW))  &trans        &trans          &trans           &trans          &trans        &trans
             >;
         };
 
