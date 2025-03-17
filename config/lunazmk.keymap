@@ -1,97 +1,57 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
-// defines readable layer index
+// dt-formatter: indent = "  "
+// dt-formatter: multilineIntegerCellsIndent = "reindent"
+// dt-formatter: multilineListCommaStyle = "leading"
 
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define NAVI    3
-#define ADJS    4
+&sk {
+  /delete-property/ ignore-modifiers;
+};
 
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+  keymap {
+    compatible = "zmk,keymap";
+
+    base {
+      bindings = <
+        &kp TAB    &kp Q         &kp W         &kp E        &kp R                                    &kp T        &kp Y    &kp U                                     &kp I        &kp O         &kp P            &kp BSLH
+        &kp CAPS   &kp LSHFT A  &kp LCTRL S  &kp LALT D  &kp LCMD F                              &kp G        &kp H    &kp LSHIFT J                               &kp RALT K  &kp RCTRL L  &kp RSHFT SEMI  &kp APOS
+        &kp LSHFT  &kp Z         &kp X         &kp C        &kp V                                    &kp B        &kp N    &kp M                                     &kp COMMA    &kp DOT       &kp FSLH         &kp ESC
+                                               &kp LGUI     &rgblayer 1 RGB_COLOR_HSB_VAL(80,70,50)  &kp SPACE    &kp RET  &rgblayer 2 RGB_COLOR_HSB_VAL(180,70,50)  &kp RALT
+      >;
+
+      sensor-bindings = <&rgbknob RGB_HUI RGB_HUD>, <&rgbknob RGB_BRI RGB_BRD>;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+    raise {
+      bindings = <
+        &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans        &trans        &trans          &trans  &trans  &trans
+      >;
 
-        default_layer {
-            // DEFAULT LAYER
-            bindings = <
-&kp ESC  &kp Q       &kp W          &kp E     &kp R      &kp T      &kp Y    &kp U     &kp I     &kp O
-&kp P    &kp DELETE  &mt LCTRL TAB  &kp A     &kp S      &kp D      &kp F    &kp G     &kp H     &kp J
-&kp K    &kp L       &kp SEMICOLON  &kp APOS  &kp LSHFT  &kp Z      &kp X    &kp C     &kp V     &kp B
-                                    &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mo NAVI
-            >;
-
-            label = "Jing";
-        };
-
-        lower_layer {
-            // LOWER Layer: Media and Number Pad
-            bindings = <
-&none      &kp F5     &kp F8     &kp F9     &kp F10    &none      &kp FSLH   &kp NUM_7  &kp NUM_8  &kp NUM_9
-&kp MINUS  &kp BKSP   &none      &kp F4     &kp F5     &kp F6     &kp F11    &none      &kp STAR   &kp NUM_4
-&kp NUM_5  &kp NUM_6  &kp COMMA  &none      &none      &kp F1     &kp F2     &kp F3     &kp F12    &none
-                                 &kp NUM_0  &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp EQUAL  &none
-            >;
-
-            label = "NUM";
-        };
-
-        raise_layer {
-            // RAISE Layer: Special Chars
-            bindings = <
-&none     &kp EXCL  &kp AT  &kp LBRC  &kp RBRC   &kp PIPE   &kp ASTRK  &kp UNDER  &kp NUM_8  &none
-&none     &none     &none   &kp HASH  &kp DLLR   &kp LPAR   &kp RPAR   &kp GRAVE  &kp PLUS   &kp MINUS
-&kp FSLH  &none     &none   &none     &none      &kp PRCNT  &kp CARET  &kp LBKT   &kp RBKT   &kp TILDE
-                            &kp AMPS  &kp EQUAL  &kp COMMA  &none      &none      &none
-            >;
-
-            label = "SYM";
-        };
-
-        nav_layer {
-            // NAVIGATION Layer: Directions
-            bindings = <
-&none     &none      &none     &none     &none     &none  &kp PG_UP  &kp HOME  &kp UARW   &kp END
-&none     &kp PSCRN  &kp LCTL  &none     &none     &none  &none      &none     &kp PG_DN  &kp LARW
-&kp DARW  &kp RARW   &none     &kp CLCK  &kp LSFT  &none  &none      &none     &none      &none
-                               &none     &none     &none  &none      &none     &trans
-            >;
-
-            label = "NAV";
-        };
-
-        adjust_layer {
-            // ADJUST Layer: Setting and Configurations
-            bindings = <
-&kp NUM_0  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR  &none  &none  &none
-&none      &none         &ext_power EP_ON  &none         &none              &none         &none       &none  &none  &none
-&none      &none         &none             &none         &ext_power EP_OFF  &none         &none       &none  &none  &none
-                                           &none         &none              &none         &none       &none  &none
-            >;
-
-            label = "Profile";
-        };
-
-        // Add the thumb keys to the default layer
-        thumb_layer {
-            bindings = <
-                &kp LALT  &kp LGUI   &kp SPC   &kp ENT   &kp RALT
-            >;
-            label = "Thumb Layer";
-        };
+      sensor-bindings = <&volknob>;
     };
+
+    lower {
+      bindings = <
+        &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &trans
+        &trans  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+        &trans  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                                  &trans    &trans    &trans       &trans     &trans     &trans
+      >;
+    };
+
+    both {
+      bindings = <
+        &rgb_ug RGB_COLOR_HSB(0,80,60)  &rgb_ug RGB_COLOR_HSB(20,80,60)  &rgb_ug RGB_COLOR_HSB(40,80,60)  &rgb_ug RGB_COLOR_HSB(60,80,60)  &rgb_ug RGB_COLOR_HSB(80,80,60)  &rgb_ug RGB_COLOR_HSB(100,80,60)    &rgb_ug RGB_COLOR_HSB(120,80,60)  &rgb_ug RGB_COLOR_HSB(140,80,60)  &rgb_ug RGB_COLOR_HSB(160,80,60)  &rgb_ug RGB_COLOR_HSB(180,80,60)  &rgb_ug RGB_COLOR_HSB(200,80,60)  &rgb_ug RGB_COLOR_HSB(220,80,60)
+        &rgb_ug RGB_COLOR_HSB(0,60,40)  &rgb_ug RGB_COLOR_HSB(20,60,40)  &rgb_ug RGB_COLOR_HSB(40,60,40)  &rgb_ug RGB_COLOR_HSB(60,60,40)  &rgb_ug RGB_COLOR_HSB(80,60,40)  &rgb_ug RGB_COLOR_HSB(100,60,40)    &rgb_ug RGB_COLOR_HSB(120,60,40)  &rgb_ug RGB_COLOR_HSB(140,60,40)  &rgb_ug RGB_COLOR_HSB(160,60,40)  &rgb_ug RGB_COLOR_HSB(180,60,40)  &rgb_ug RGB_COLOR_HSB(200,60,40)  &rgb_ug RGB_COLOR_HSB(220,60,40)
+        &rgb_ug RGB_COLOR_HSB(0,80,30)  &rgb_ug RGB_COLOR_HSB(20,80,30)  &rgb_ug RGB_COLOR_HSB(40,80,30)  &rgb_ug RGB_COLOR_HSB(60,80,30)  &rgb_ug RGB_COLOR_HSB(80,80,30)  &rgb_ug RGB_COLOR_HSB(100,80,30)    &rgb_ug RGB_COLOR_HSB(120,80,30)  &rgb_ug RGB_COLOR_HSB(140,80,30)  &rgb_ug RGB_COLOR_HSB(160,80,30)  &rgb_ug RGB_COLOR_HSB(180,80,30)  &rgb_ug RGB_COLOR_HSB(200,80,30)  &rgb_ug RGB_COLOR_HSB(220,80,30)
+                                                                                                          &trans                           &trans                           &trans                              &trans                            &trans                            &trans
+      >;
+    };
+
+  };
 };
