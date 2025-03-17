@@ -61,10 +61,10 @@
             //                                   '--------+---------+---------'    '-------+---------+---------'
 
             bindings = <
-        &none       &kp F5     &kp F8     &kp F9     &kp F10    &none      &kp FSLH   &kp NUM_7  &kp NUM_8  &kp NUM_9
-        &kp MINUS   &kp BKSP   &none      &kp F4     &kp F5     &kp F6     &kp F11    &none      &kp STAR   &kp NUM_4
-        &kp NUM_5   &kp NUM_6  &kp COMMA  &none      &none      &kp F1     &kp F2     &kp F3     &kp F12    &none
-                                          &kp NUM_0  &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp EQUAL  &none
+        &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "NUM";
@@ -83,10 +83,10 @@
             //                                   '--------+---------+---------'    '-------+---------+---------'
 
             bindings = <
-&none     &kp EXCL  &kp AT  &kp LBRC  &kp RBRC   &kp PIPE   &kp ASTRK  &kp UNDER  &kp NUM_8  &none
-&none     &none     &none   &kp HASH  &kp DLLR   &kp LPAR   &kp RPAR   &kp GRAVE  &kp PLUS   &kp MINUS
-&kp FSLH  &none     &none   &none     &none      &kp PRCNT  &kp CARET  &kp LBKT   &kp RBKT   &kp TILDE
-                            &kp AMPS  &kp EQUAL  &kp COMMA  &none      &none      &none
+        &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "SYM";
@@ -105,10 +105,10 @@
             //                                   '--------+---------+---------'    '-------+---------+---------'
 
             bindings = <
-&none     &none      &none     &none     &none     &none  &kp PG_UP  &kp HOME  &kp UARW   &kp END
-&none     &kp PSCRN  &kp LCTL  &none     &none     &none  &none      &none     &kp PG_DN  &kp LARW
-&kp DARW  &kp RARW   &none     &kp CLCK  &kp LSFT  &none  &none      &none     &none      &none
-                               &none     &none     &none  &none      &none     &trans
+        &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "NAV";
@@ -127,10 +127,10 @@
             //                                 '--------+---------+---------'    '---------+---------+---------'
 
             bindings = <
-&kp NUM_0  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR  &none  &none  &none
-&none      &none         &ext_power EP_ON  &none         &none              &none         &none       &none  &none  &none
-&none      &none         &none             &none         &ext_power EP_OFF  &none         &none       &none  &none  &none
-                                           &none         &none              &none         &none       &none  &none
+        &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "Profile";
