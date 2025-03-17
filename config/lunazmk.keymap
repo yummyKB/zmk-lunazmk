@@ -13,10 +13,10 @@
 
     base {
       bindings = <
-        &kp TAB    &kp Q         &kp W         &kp E        &kp R                                    &kp T        &kp Y    &kp U                                     &kp I        &kp O         &kp P            &kp BSLH
-        &kp CAPS   &kp LSHFT A  &kp LCTRL S  &kp LALT D  &kp LCMD F                              &kp G        &kp H    &kp LSHIFT J                               &kp RALT K  &kp RCTRL L  &kp RSHFT SEMI  &kp APOS
-        &kp LSHFT  &kp Z         &kp X         &kp C        &kp V                                    &kp B        &kp N    &kp M                                     &kp COMMA    &kp DOT       &kp FSLH         &kp ESC
-                                               &kp LGUI     &rgblayer 1 RGB_COLOR_HSB_VAL(80,70,50)  &kp SPACE    &kp RET  &rgblayer 2 RGB_COLOR_HSB_VAL(180,70,50)  &kp RALT
+        &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans        &trans        &trans          &trans  &trans  &trans
       >;
     };
 
