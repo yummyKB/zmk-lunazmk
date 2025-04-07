@@ -17,3 +17,12 @@
 		;
 };
 
+&i2c1 {
+    status = "okay";
+    trackball@0a {
+        compatible = "az1uball";
+        reg = <0x0a>;
+        label = "AZ1UBALL";
+        int-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
+    };
+};
