@@ -19,10 +19,13 @@
 
 &i2c1 {
     status = "okay";
-    trackball@0a {
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-names = "default";
+
+    az1uball: trackball@0a {
         compatible = "az1uball";
         reg = <0x0a>;
         label = "AZ1UBALL";
-        int-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
+        int-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;  // 必要に応じて調整
     };
 };
