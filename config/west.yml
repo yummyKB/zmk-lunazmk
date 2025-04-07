@@ -2,15 +2,25 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar  # <-- new entry
+    - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: kzyz  # <-- 新しく追加
+      url-base: https://github.com/kzyz
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-rgbled-widget  # <-- new entry
+
+    - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
+
+    - name: zmk-az1uball-driver  # <-- 新しく追加
+      remote: kzyz
+      revision: main
+      path: modules/zmk-az1uball-driver
+
   self:
     path: config
