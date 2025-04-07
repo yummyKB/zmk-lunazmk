@@ -17,7 +17,7 @@
 		;
 };
 
-&i2c1 {
+&i2c0 {
     status = "okay";
     pinctrl-0 = <&i2c1_default>;
     pinctrl-names = "default";
