@@ -12,11 +12,9 @@ if SHIELD_LUNAZMK_RIGHT
 
 config ZMK_KEYBOARD_NAME
 	default "lunazmk Right"
-	
-endif
 
-if SHIELD_LUNAZMK_LEFT || SHIELD_LUNAZMK_RIGHT
+endif
 
 config ZMK_SPLIT
 	default y
-endif
+	depends on SHIELD_LUNAZMK_LEFT || SHIELD_LUNAZMK_RIGHT
