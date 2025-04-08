@@ -26,8 +26,8 @@
     status = "okay";
     clock-frequency = <I2C_BITRATE_FAST>;
 
-    az1uball: az1uball@0a {
-        compatible = "aztouch,az1uball";
+    az1uball: az1uball@a {
+        compatible = "palette,az1uball";
         reg = <0x0A>;
         label = "AZ1UBALL";
         polling = <1>;
