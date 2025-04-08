@@ -28,7 +28,7 @@
 
     az1uball: az1uball@0 {
         compatible = "aztouch,az1uball";
-        reg = <0x10>;  // I2Cアドレスを適切に設定
+        reg = <0x0A>;  // I2Cアドレスを適切に設定
         label = "AZ1UBALL";
         polling = <1>;
         poll-delay-ms = <10>;
