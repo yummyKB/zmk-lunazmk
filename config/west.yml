@@ -5,6 +5,7 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
     - name: Yoichi-Maribao  # <-- 新しく追加するリモート名
+      url-base: https://github.com/Yoichi-Maribao
 
   projects:
     - name: zmk
