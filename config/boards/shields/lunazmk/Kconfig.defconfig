@@ -27,11 +27,14 @@ config ZMK_DISPLAY
 
 if ZMK_DISPLAY
 
+// SPIとLS0XX関連の設定を削除または無効化
+// SPIの設定を無効にする
 config SPI
-	default y
+	default n
 
+// LS0XXの設定を無効にする
 config LS0XX
-	default y
+	default n
 
 config LV_Z_BITS_PER_PIXEL
 	default 1
