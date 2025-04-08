@@ -20,7 +20,7 @@ manifest:
     - name: az1uball-test  # <-- zmk-az1uball-driver を az1uball-test に置き換え
       remote: Yoichi-Maribao  # <-- 新しいリモート名を指定
       revision: main
-      path: modules/az1uball-test  # プロジェクトを配置するパスを指定
+      #path: modules/az1uball-test  # プロジェクトを配置するパスを指定
 
   self:
     path: config
