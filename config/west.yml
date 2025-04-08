@@ -4,8 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: caksoylar
       url-base: https://github.com/caksoylar
-    - name: kzyz  # <-- 新しく追加
-      url-base: https://github.com/kzyz
+    - name: Yoichi-Maribao  # <-- 新しく追加するリモート名
 
   projects:
     - name: zmk
@@ -17,10 +16,10 @@ manifest:
       remote: caksoylar
       revision: main
 
-    - name: zmk-az1uball-driver  # <-- 新しく追加
-      remote: kzyz
+    - name: az1uball-test  # <-- zmk-az1uball-driver を az1uball-test に置き換え
+      remote: Yoichi-Maribao  # <-- 新しいリモート名を指定
       revision: main
-      path: modules/zmk-az1uball-driver
+      path: modules/az1uball-test  # プロジェクトを配置するパスを指定
 
   self:
     path: config
