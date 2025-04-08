@@ -18,3 +18,7 @@ endif
 config ZMK_SPLIT
 	default y
 	depends on SHIELD_LUNAZMK_LEFT || SHIELD_LUNAZMK_RIGHT
+
+config AZ1UBALL
+    bool "Enable AZ1UBALL"
+    default n
