@@ -26,13 +26,13 @@
     status = "okay";
     clock-frequency = <I2C_BITRATE_FAST>;
 
-    az1uball: az1uball@0 {
+    az1uball: az1uball@0a {
         compatible = "aztouch,az1uball";
-        reg = <0x0A>;  // I2Cアドレスを適切に設定
+        reg = <0x0A>;
         label = "AZ1UBALL";
         polling = <1>;
         poll-delay-ms = <10>;
-        reset-gpios = <&gpio0 10 0>;  // 必要なら残す
-        // interrupts = <&gpio0 10 0>; // 割り込みを使わない場合はコメントアウト
+        // reset-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;  // フラグを明示
     };
+
 };
