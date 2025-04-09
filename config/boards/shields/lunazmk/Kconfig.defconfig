@@ -19,6 +19,11 @@ config ZMK_SPLIT
 	default y
 	depends on SHIELD_LUNAZMK_LEFT || SHIELD_LUNAZMK_RIGHT
 
+config ZMK_POINTING
+    default y
+
 config AZ1UBALL
-    bool "Enable AZ1UBALL"
-    default n
+    default y
+
+config I2C
+    default y
