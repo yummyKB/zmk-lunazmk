@@ -8,7 +8,7 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
 config ZMK_STUDIO
-    default n
+    default y
 
 endif # SHIELD_LUNAZMK_LEFT
 
