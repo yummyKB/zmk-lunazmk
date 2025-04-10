@@ -7,12 +7,12 @@
 #include "lunazmk.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-
+/*
 &gpio0 {
     #interrupt-cells = <2>;
     gpio-controller;
 };
-
+*/
 &kscan0 {
 	col-gpios
 		= <&gpio0 10 GPIO_ACTIVE_HIGH>   //Col0
