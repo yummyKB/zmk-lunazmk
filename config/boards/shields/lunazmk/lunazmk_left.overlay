@@ -7,6 +7,7 @@
 #include "lunazmk.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+
 &gpio0 {
     #interrupt-cells = <2>;
     gpio-controller;
