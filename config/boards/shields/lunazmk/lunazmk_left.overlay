@@ -9,20 +9,24 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &kscan0 {
-	col-gpios
-		= <&gpio0 10 GPIO_ACTIVE_HIGH>   //Col0
-		, <&gpio1 15 GPIO_ACTIVE_HIGH>   //Col1
-		, <&gpio1 14 GPIO_ACTIVE_HIGH>   //Col2
-		, <&gpio1 13 GPIO_ACTIVE_HIGH>   //Col3
-		, <&gpio1 12 GPIO_ACTIVE_HIGH>   //Col4
-		, <&gpio1 11 GPIO_ACTIVE_HIGH>   //Col5
-		;
+    col-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>,
+                <&gpio1 15 GPIO_ACTIVE_HIGH>,
+                <&gpio1 14 GPIO_ACTIVE_HIGH>,
+                <&gpio1 13 GPIO_ACTIVE_HIGH>,
+                <&gpio1 12 GPIO_ACTIVE_HIGH>,
+                <&gpio1 11 GPIO_ACTIVE_HIGH>;
+    row-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    diode-direction = "col2row";
 };
 
 &trackball_input_listener_0 {
     status = "okay";
     device = <&trackball>;
-    input-processors = <&zip_xy_scaler 16 16>,<&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>;
+    input-processors = <&zip_xy_scaler 16 16>,
+                       <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>;
 };
 
 &trackball_input_listener_1 {
@@ -38,7 +42,6 @@
         status = "okay";
         default-mode = "mouse";
         sensitivity = "4x";
-        
         flip_x;
         flip_y;
     };
