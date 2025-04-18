@@ -39,8 +39,8 @@
         default-mode = "mouse";
         sensitivity = "4x";
         
-        flip-x;
-        flip-y;
+        flip_x;
+        flip_y;
     };
 };
 
