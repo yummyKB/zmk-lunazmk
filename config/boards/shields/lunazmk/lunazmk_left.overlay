@@ -38,6 +38,9 @@
         status = "okay";
         default-mode = "mouse";
         sensitivity = "4x";
+        swap-xy;
+        invert-x;
+        invert-y;
     };
 };
 
