@@ -14,7 +14,7 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: lunazmk_
+    shield: lunazmk_L
   - board: seeeduino_xiao_ble
     shield: lunazmk_R
   - board: seeeduino_xiao_ble
