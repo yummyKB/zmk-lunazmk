@@ -1,5 +1,5 @@
 # Lunazmk Left Shield用設定
-if SHIELD_LUNAZMK_LEFT
+if SHIELD_LUNAZMK_L
 
 config ZMK_KEYBOARD_NAME
     default "lunazmk"
@@ -10,11 +10,11 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 config ZMK_STUDIO
     default n
 
-endif # SHIELD_LUNAZMK_LEFT
+endif # SHIELD_LUNAZMK_L
 
 
 # Lunazmk LeftまたはRight Shield用設定
-if SHIELD_LUNAZMK_LEFT || SHIELD_LUNAZMK_RIGHT
+if SHIELD_LUNAZMK_L || SHIELD_LUNAZMK_R
 
 config ZMK_SPLIT
     default y
@@ -28,13 +28,13 @@ config ZMK_POINTING
 config AZ1UBALL
     default y
 
-endif # SHIELD_LUNAZMK_LEFT || SHIELD_LUNAZMK_RIGHT
+endif # SHIELD_LUNAZMK_L || SHIELD_LUNAZMK_R
 
-# SHIELD_LUNAZMK_LEFT および SHIELD_LUNAZMK_RIGHT の定義
-config SHIELD_LUNAZMK_LEFT
-    bool "Lunazmk Left Shield"
+# SHIELD_LUNAZMK_L および SHIELD_LUNAZMK_R の定義
+config SHIELD_LUNAZMK_L
+    bool "Lunazmk L Shield"
     default y
 
-config SHIELD_LUNAZMK_RIGHT
-    bool "Lunazmk Right Shield"
+config SHIELD_LUNAZMK_R
+    bool "Lunazmk R Shield"
     default n
