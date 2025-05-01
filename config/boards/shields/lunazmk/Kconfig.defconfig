@@ -17,7 +17,9 @@ endif # SHIELD_LUNAZMK_L
 if SHIELD_LUNAZMK_R
 
 config ZMK_SPLIT_ROLE_PERIPHERAL
+    bool
     default y
+
 
 endif # SHIELD_LUNAZMK_R
 
