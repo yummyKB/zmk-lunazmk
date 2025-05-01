@@ -15,12 +15,7 @@ endif # SHIELD_LUNAZMK_L
 
 # Lunazmk Right Shield用設定
 if SHIELD_LUNAZMK_R
-
-config ZMK_SPLIT_ROLE_PERIPHERAL
-    bool
-    default y
-
-
+    # ZMK_SPLIT_ROLE_PERIPHERAL は ZMK が自動で設定するため記述しない
 endif # SHIELD_LUNAZMK_R
 
 
