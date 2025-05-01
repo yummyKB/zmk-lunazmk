@@ -17,6 +17,7 @@ endif # SHIELD_LUNAZMK_L
 if SHIELD_LUNAZMK_R
 
 config ZMK_SPLIT_BLE_ROLE_PERIPHERAL
+    bool "Enable Peripheral Role"
     default y
 
 endif # SHIELD_LUNAZMK_R
