@@ -9,6 +9,15 @@ config ZMK_SPLIT
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config I2C
+    default y
+
+config ZMK_POINTING
+    default y
+
+config AZ1UBALL
+    default y
+
 endif
 
 if SHIELD_LUNAZMK_R
@@ -17,15 +26,6 @@ config ZMK_KEYBOARD_NAME
     default "lunazmk_R"
 
 config ZMK_SPLIT
-    default y
-
-config I2C
-    default y
-
-config ZMK_POINTING
-    default y
-
-config AZ1UBALL
     default y
 
 endif
