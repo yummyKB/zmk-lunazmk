@@ -1,51 +1,16 @@
-# Lunazmk Left Shield用設定
 if SHIELD_LUNAZMK_L
-
 config ZMK_KEYBOARD_NAME
-    default "lunazmk"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default y
-
-config ZMK_STUDIO
-    default n
-
-endif # SHIELD_LUNAZMK_L
-
-
-# Lunazmk Right Shield用設定
-if SHIELD_LUNAZMK_R
-
-config ZMK_SPLIT_BLE_ROLE_PERIPHERAL
-    bool "Enable Peripheral Role"
-    default y
-
-endif # SHIELD_LUNAZMK_R
-
-
-# Lunazmk LeftまたはRight Shield用設定
-if SHIELD_LUNAZMK_L || SHIELD_LUNAZMK_R
-
+default "lunazmk_L"
 config ZMK_SPLIT
-    default y
-
-config I2C
-    default y
-
-config ZMK_POINTING
-    default y
-
-config AZ1UBALL
-    default y
-
-endif # SHIELD_LUNAZMK_L || SHIELD_LUNAZMK_R
-
-
-# SHIELD_LUNAZMK_L および SHIELD_LUNAZMK_R の定義
-config SHIELD_LUNAZMK_L
-    bool "Lunazmk L Shield"
-    default y
-
-config SHIELD_LUNAZMK_R
-    bool "Lunazmk R Shield"
-    default n
+default y
+config ZMK_SPLIT_ROLE_CENTRAL
+default y
+endif
+if SHIELD_LUNAZMK_R
+config ZMK_KEYBOARD_NAME
+default "lunazmk_R"
+config ZMK_SPLIT
+default y
+config ZMK_SPLIT_ROLE_PERIPHERAL
+default y
+endif
