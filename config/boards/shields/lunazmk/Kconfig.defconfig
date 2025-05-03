@@ -1,16 +1,31 @@
 if SHIELD_LUNAZMK_L
+
 config ZMK_KEYBOARD_NAME
-default "lunazmk_L"
+    default "lunazmk_L"
+
 config ZMK_SPLIT
-default y
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
-default y
+    default y
+
 endif
+
 if SHIELD_LUNAZMK_R
+
 config ZMK_KEYBOARD_NAME
-default "lunazmk_R"
+    default "lunazmk_R"
+
 config ZMK_SPLIT
-default y
-config ZMK_SPLIT_ROLE_PERIPHERAL
-default y
+    default y
+
+config I2C
+    default y
+
+config ZMK_POINTING
+    default y
+
+config AZ1UBALL
+    default y
+
 endif
