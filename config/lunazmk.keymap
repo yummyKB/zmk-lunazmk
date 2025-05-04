@@ -18,10 +18,10 @@
 #define layer_6   6
 
 / {
-//    chosen {
-//        zmk,kscan = &kscan0;
-//        zmk,matrix_transform = &default_transform;
-//    };
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -46,7 +46,7 @@
             >;
         };
 
-        lower_layer {
+        layer_1 {
             // LOWER Layer: Media and Number Pad
             // .--------------------------------------------------------------.    .-----------------------------------------------------------.
             // |              |    F5   |   F8   |   F9   |   F10   |         |    |  / ?  |   7 &   |   8 *   |   9 (   |   - _    |   BKSP   |
