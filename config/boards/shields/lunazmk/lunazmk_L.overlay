@@ -40,8 +40,10 @@
         status = "okay";
         default-mode = "mouse";
         sensitivity = "4x";
+        /*
         flip_x;
         flip_y;
+        */
     };
 };
 
