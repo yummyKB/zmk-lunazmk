@@ -24,7 +24,8 @@
     status = "disabled";
 };
 */
-
+/*
 &trackball_input_listener_1 {
     status = "disabled";
 };
+*/
