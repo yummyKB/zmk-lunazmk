@@ -29,3 +29,13 @@
     status = "disabled";
 };
 */
+
+/ {
+    aliases {
+        led_red = &user_led;
+    };
+};
+
+&user_led {
+    status = "okay";
+};
