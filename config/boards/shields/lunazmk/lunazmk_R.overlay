@@ -1,5 +1,11 @@
 #include "lunazmk.dtsi"
 
+/{
+		chosen{
+			zmk,split-role="peripheral";
+		};
+};
+
 &default_transform {
     col-offset = <6>;
 };
