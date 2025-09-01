@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
     - name: yummyKB  # <-- 新しく追加するリモート名
       url-base: https://github.com/yummyKB
 
@@ -12,10 +10,6 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-
-    - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: main
 
     - name: zmk-az1uball-driver  # <-- zmk-az1uball-driver を az1uball-test に置き換え
       remote: yummyKB  # <-- 新しいリモート名を指定
