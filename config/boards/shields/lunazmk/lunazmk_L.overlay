@@ -8,6 +8,12 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/{
+		chosen{
+				zmk,split-role = "central";
+		};
+};
+
 &kscan0 {
     col-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>,
                 <&gpio1 15 GPIO_ACTIVE_HIGH>,
