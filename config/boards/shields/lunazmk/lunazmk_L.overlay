@@ -46,15 +46,3 @@
         */
     };
 };
-
-/ {
-    aliases {
-        led_red = &my_led0;
-    };
-};
-
-&my_led0 {
-    status = "okay";
-    gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;  // GPIO番号は実際に接続しているピンに変更してください
-    label = "Red LED";
-};
