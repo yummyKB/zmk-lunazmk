@@ -2,7 +2,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: yummyKB  # <-- 新しく追加するリモート名
+    - name: yummyKB
       url-base: https://github.com/yummyKB
 
   projects:
@@ -11,10 +11,9 @@ manifest:
       revision: main
       import: app/manifest/zephyr/west.yml
 
-    - name: zmk-az1uball-driver  # <-- zmk-az1uball-driver を az1uball-test に置き換え
-      remote: yummyKB  # <-- 新しいリモート名を指定
+    - name: zmk-az1uball-driver
+      remote: yummyKB
       revision: main
-      #path: modules/az1uball-test  # プロジェクトを配置するパスを指定
 
   self:
     path: config
