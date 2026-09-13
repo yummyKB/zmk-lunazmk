@@ -9,7 +9,7 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: main
-      import: app/west.yml
+      import: app/manifest/zephyr/west.yml
 
     - name: zmk-az1uball-driver  # <-- zmk-az1uball-driver を az1uball-test に置き換え
       remote: yummyKB  # <-- 新しいリモート名を指定
