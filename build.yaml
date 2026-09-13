@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble/nrf52840
     shield: lunazmk_L
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble/nrf52840
     shield: lunazmk_R
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble/nrf52840
     shield: settings_reset
