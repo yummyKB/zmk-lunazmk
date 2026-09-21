@@ -15,13 +15,13 @@
 };
 
 &kscan0 {
-    col-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>, // D6
-                <&gpio1 12 GPIO_ACTIVE_HIGH>, // D7
-                <&gpio1 13 GPIO_ACTIVE_HIGH>, // D8
-                <&gpio1 14 GPIO_ACTIVE_HIGH>, // D9
-                <&gpio1 15 GPIO_ACTIVE_HIGH>, // D10
-                <&gpio0 10 GPIO_ACTIVE_HIGH>  // NFCピン / 別のGPIO
-                ;
+    col-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>, // D3 (Col 0: 外側)
+            <&gpio1 15 GPIO_ACTIVE_HIGH>, // D10 (Col 1)
+            <&gpio1 14 GPIO_ACTIVE_HIGH>, // D9  (Col 2)
+            <&gpio1 13 GPIO_ACTIVE_HIGH>, // D8  (Col 3)
+            <&gpio1 12 GPIO_ACTIVE_HIGH>, // D7  (Col 4)
+            <&gpio1 11 GPIO_ACTIVE_HIGH>  // D6  (Col 5: 内側)
+            ;
 };
 
 &trackball_input_listener_0 {
